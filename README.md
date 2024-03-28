@@ -1,16 +1,16 @@
 # Enhanced Bitnami package for PostgreSQL
 
-## Descriptions
-Follow [Bitnamic package for PostgreSQL](https://github.com/bitnami/containers/blob/main/bitnami/postgresql/README.md) README.md
+## Description
+Follow [Bitnami package for PostgreSQL](https://github.com/bitnami/containers/blob/main/bitnami/postgresql/README.md) README.md
 
 ## Enhancements
 | Enhancement | Description |
 |-------------|-------------|
-| PGVector Extension | PGVector extension enabled for use as a Vector database |
-| PG Cron Extension | PG Cron extension enabled |
+| pgvector Extension | Vector DB extension enabled for use as a Vector embeddings storage |
+| pg_cron Extension | Extension enabled for in database scheduled tasks |
 
 ## Usage
-### PG Vector
+### pgvector
 
 1. Run the container
     ```
@@ -38,5 +38,5 @@ Follow [Bitnamic package for PostgreSQL](https://github.com/bitnami/containers/b
     SELECT * FROM items ORDER BY embedding <-> '[3,1,2]' LIMIT 5;
     ```
 
-### PG Cron
+### pg_cron
 TO-Do
