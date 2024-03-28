@@ -3,13 +3,17 @@
 FROM bitnami/postgresql:16-debian-12 as builder
 USER root
 
+# Setup build tools
 RUN apt-get update \
     && apt-get install git build-essential -y
+
+# Setup/install pgvector
 WORKDIR /home
 RUN git clone --branch v0.4.4 https://github.com/pgvector/pgvector.git
 WORKDIR /home/pgvector
 RUN make && make install
 
+# Setup/install pg_cron
 WORKDIR /home
 RUN git clone https://github.com/citusdata/pg_cron.git
 WORKDIR /home/pg_cron
