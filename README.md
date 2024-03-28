@@ -10,7 +10,6 @@ Follow [Bitnami package for PostgreSQL](https://github.com/bitnami/containers/bl
 | pg_cron Extension | Extension enabled for in database scheduled tasks |
 
 ## Usage
-### pgvector
 
 1. Run the container
     ```
@@ -20,20 +19,23 @@ Follow [Bitnami package for PostgreSQL](https://github.com/bitnami/containers/bl
     ```
     psql -h localhost -p 5432 -U postgres postgres
     ```
-2. Create the extension
+    
+### pgvector
+
+1. Create the extension
     ```
     CREATE EXTENSION vector;
 
     ```
-3. Create table with vector column
+2. Create table with vector column
     ```
     CREATE TABLE items (id bigserial PRIMARY KEY, embedding vector(3));
     ```
-4. Insert vector embeddings
+3. Insert vector embeddings
     ```
     INSERT INTO items (embedding) VALUES ('[1,2,3]'), ('[4,5,6]');
     ```
-5. Retrieve vector embeddings
+4. Retrieve vector embeddings
     ```
     SELECT * FROM items ORDER BY embedding <-> '[3,1,2]' LIMIT 5;
     ```
