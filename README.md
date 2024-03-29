@@ -1,4 +1,4 @@
-# Enhanced Bitnami package for PostgreSQL
+# Extended Bitnami package for PostgreSQL
 
 ## Description
 Follow [Bitnami package for PostgreSQL](https://github.com/bitnami/containers/blob/main/bitnami/postgresql/README.md) README.md
