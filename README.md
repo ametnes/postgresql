@@ -3,6 +3,12 @@
 ## Description
 Follow [Bitnami package for PostgreSQL](https://github.com/bitnami/containers/blob/main/bitnami/postgresql/README.md) README.md
 
+<p align="center">
+  <a href="https://cloud.ametnes.com/console/signin?callback_id=xiex7aiYo5wa8ooshavae6ik5ShoopieS4So7Aixaejieph6noothaj7nahquageza9wahtaSoo2vaingaed9gu9OoPhee6thi2iu4ThieZohci1waiyohn8eiVat4zah4aiy9saiy5suteiquasah" rel="Try in Ametnes" _target="blank">
+      <img src="https://cloud.ametnes.com/api/assets/trywithametnes" width="150" />
+  </a>
+</p>
+
 ## Enhancements
 | Enhancement | Description |
 |-------------|-------------|
