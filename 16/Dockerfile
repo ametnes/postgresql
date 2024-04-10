@@ -27,3 +27,17 @@ COPY --from=builder /opt/bitnami/postgresql/lib/*.so /opt/bitnami/postgresql/lib
 COPY --from=builder /opt/bitnami/postgresql/share/extension /opt/bitnami/postgresql/share/extension
 
 USER 1001
+
+
+# New settings
+FROM docker.io/library/postgres
+RUN apt-get update && \
+    apt-get install -y \
+    cron \
+    postgresql-`postgres -V | awk '{print $3}' | awk -F. '{print $1}'`-cron
+
+COPY setup-pg-cron.sh /docker-entrypoint-initdb.d/
+
+
+
+# docker run -e POSTGRES_PASSWORD=password -p 5432:5432 --rm -it ametnes/postgresql:16-debian-12
