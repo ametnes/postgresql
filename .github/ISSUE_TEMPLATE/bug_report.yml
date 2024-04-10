@@ -6,8 +6,8 @@ assignees: []
 body:
   - type: input
     attributes:
-      label: Mage version
-      description: What Mage version are you using?
+      label: Postgres version
+      description: What Postgres version are you using?
     validations:
       required: true
   - type: textarea
